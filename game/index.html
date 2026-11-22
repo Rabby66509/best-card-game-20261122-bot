@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ember Court — a card duel</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div class="brand">EMBER COURT</div>
+    <div class="top-stats">
+      <span id="turn-label">Turn 1</span>
+      <span id="score-label">Score 0</span>
+      <span id="deck-label">Deck 0</span>
+      <span id="discard-label">Discard 0</span>
+    </div>
+    <button id="help-btn" type="button" title="How to play">?</button>
+  </header>
+
+  <main id="table">
+    <section id="enemy-zone" aria-label="Opponent"></section>
+    <section id="mid-row">
+      <div id="intent-panel" aria-label="Enemy intent"></div>
+      <div id="log" aria-label="Battle log"></div>
+    </section>
+    <section id="player-zone" aria-label="Player"></section>
+  </main>
+
+  <footer id="hand-bar">
+    <div id="energy-row" aria-label="Energy"></div>
+    <div id="hand" aria-label="Your hand"></div>
+    <div id="actions">
+      <button id="end-turn-btn" type="button">End Turn ⏎</button>
+      <div id="hint">Click a card to play it · Keys 1–7 play · Space ends turn</div>
+    </div>
+  </footer>
+
+  <div id="overlay" hidden></div>
+  <div id="floaters"></div>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
